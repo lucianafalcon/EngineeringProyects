@@ -1,1 +1,55 @@
-hola mundo ahre comit nuevo
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slidebar Navigation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="slide">
+        <h1>Engineering Projects</h1>
+        <h3>Luciana Falcon</h3>
+        <h3>MENU</h3>
+        <ul>
+            <li><a href="#" onclick="mostrarVideo()"><i class="fas fa-tv"></i> Notch Twin-T Low-Pass Filter</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenedor para el video (oculto por defecto) -->
+    <div id="videoContainer" style="display: none; text-align: center; margin-top: 20px;">
+        <video id="videoFiltro" width="600" controls>
+            <source src="notch-low-pass-filter.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <br>
+        <button onclick="mostrarPdf()">Mostrar PDF</button>
+        
+        <!-- Contenedor del PDF (oculto por defecto) -->
+        <div id="pdfContainer" style="display: none; margin-top: 20px;">
+            <iframe src="documento.pdf" width="600" height="500"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function mostrarVideo() {
+            var videoContainer = document.getElementById("videoContainer");
+            if (videoContainer.style.display === "none") {
+                videoContainer.style.display = "block";
+            } else {
+                videoContainer.style.display = "none";
+            }
+        }
+
+        function mostrarPdf() {
+            var pdfContainer = document.getElementById("pdfContainer");
+            if (pdfContainer.style.display === "none") {
+                pdfContainer.style.display = "block";
+            } else {
+                pdfContainer.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

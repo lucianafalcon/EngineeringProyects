@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.slide {
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+.slide ul {
+    list-style: none;
+    padding: 0;
+}
+
+.slide ul li {
+    margin: 10px 0;
+}
+
+.slide ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.imagen-1{
+    border-radius: 25px;
+    width: 350px;
+    height: 250px;
+    cursor: pointer;
+}
