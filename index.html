@@ -24,7 +24,8 @@
             Tu navegador no soporta el elemento de video.
         </video>
         <br>
-        <button onclick="mostrarPdf()">Mostrar PDF</button>
+        <button onclick="mostrarPdf()">View document</button>
+        <button onclick="mostrarArchivos()">Download files</button>
         
         <!-- Contenedor del PDF (oculto por defecto) -->
         <div id="pdfContainer" style="display: none; margin-top: 20px;">
@@ -50,6 +51,10 @@
                 pdfContainer.style.display = "none";
             }
         }
-    </script>
+
+        function mostrarArchivos() {
+            window.location.href = "https://github.com/lucianafalcon/Filtro---ADC.git";
+        }
+  </script>
 </body>
 </html>
