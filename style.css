@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/*extraido de google fonts*/
 
 body {
     font-family: "Poppins", serif;
@@ -8,37 +7,10 @@ body {
     padding: 0;
 }
 
-.slide {
-    background: #333;
-    color: white;
-    padding: 20px;
-}
-
-.slide ul {
-    list-style: none;
-    padding: 0;
-}
-
-.slide ul li {
-    margin: 10px 0;
-}
-
-.slide ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.imagen-1{
-    border-radius: 25px;
-    width: 350px;
-    height: 250px;
-    cursor: pointer;
-}
-
-.menu{
-    background-color: #1A202C;
+.menu {
+    background-color: #000000;
     color: #fff;
-    height: 70px;
+    height: 100px;
 }
 
 .menu__container {
@@ -51,44 +23,67 @@ body {
     margin: 0 auto;
 }
 
-.menu__arrow {
-    width: 12px;
-    height: 12px;
-    margin-left: 5px;
-    vertical-align: middle;
-    display: inline-block;
-    transform: var(--transform);
-    transition: transform 0.3s ease-in-out;
-}
 .menu__links {
     display: flex;
+    align-items: center;
+}
+
+.menu__link {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
 }
 
 .menu__item {
     list-style: none;
     position: relative;
     padding: 10px;
-    --transform: rotate(-90deg); 
 }
 
 .menu__nesting {
     display: none;
     position: absolute;
-    background-color: #1A202C;
+    list-style: none;
+    left: 0;
+    top: 100%;
+    background-color: rgb(134, 153, 57);
+    z-index: 10;
+    width: max-content; /* Ajusta el ancho al contenido */
+    text-align: center; /* Centra el texto dentro */
+    padding: 5px;
+}
+
+.menu__inside {
+    text-align: center; /* Asegura que los elementos internos estén centrados */
+    width: 100%;
 }
 
 .menu__item:hover .menu__nesting {
     display: block;
-    --transform: rotate(0);
 }
 
-.menu__item:hover {
-    --transform: rotate(0deg);
-}
-
-.menu__icon_static {
-    width: 20px;
-    height: 20px;
+.menu__arrow {
+    width: 12px;
+    height: 12px;
     margin-left: 5px;
     vertical-align: middle;
+    transform: rotate(-90deg);  /* Aseguramos que apunten hacia abajo por defecto */
+    transition: transform 0.3s ease-in-out;  /* Animación suave */
+}
+
+.menu__item:hover .menu__arrow {
+    transform: rotate(0deg);  /* Rota las flechas 180 grados al pasar el mouse */
+}
+
+.menu__hamburguer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.menu__img {
+    display: block;
+    width: 36px;
 }
