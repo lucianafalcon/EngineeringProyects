@@ -83,7 +83,9 @@ body {
     cursor: pointer;
 }
 
-.menu__img {
-    display: block;
-    width: 36px;
+.menu__icon_static {
+    width: 30px;
+    height: 12px;
+    margin-left: 5px;
+    vertical-align: middle;
 }
