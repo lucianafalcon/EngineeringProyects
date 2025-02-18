@@ -44,30 +44,39 @@
 
 
     <!-- Contenedor para el video (oculto por defecto) -->
+    <div id="videoContainer" style="display: none; text-align: center; margin-top: 20px; margin-right: 50px;">
+     
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <div style="width: 20%; text-align: justify; margin-left: 50px;">
+                <h1>NOTCH TWIN-T</h1> 
+                <h1>LOW PASS FILTER</h1>    
+            </div>
 
-
-    <div id="videoContainer" style="display: none; text-align: center; margin-top: 20px;">
+        <p style="width: 50%; text-align: justify; margin-right: 50px; margin-left: 50px;">
         The designed Notch Twin-T filter is a band-reject filter in cascade with a low-pass filter. 
         Its main function is to eliminate the specific frequency of 79.5 Hz while allowing the rest of the signal to pass 
         and attenuating frequencies above 954.92 Hz due to the low-pass response.
 
         This type of filter is useful in cardiac monitoring devices, such as electrocardiographs (ECG),
         where power line interference or muscle noise at low frequencies is common. By adjusting the notch values,
-        it is possible to clean the signal and improve monitoring accuracy.
+        it is possible to clean the signal and improve monitoring accuracy.</p>
+     </div>           
+
         <video id="videoFiltro" width="600" controls>
             <source src="notch-low-pass-filter.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
         </video>
-        <br>
-        <button onclick="mostrarPdf()">View document</button>
-        <button onclick="mostrarArchivos()">Download files</button>
-        
+
+
+    <br>
+    <button onclick="mostrarPdf()">View document</button>
+    <button onclick="mostrarArchivos()">Download files</button>
+
         <!-- Contenedor del PDF (oculto por defecto) -->
         <div id="pdfContainer" style="display: none; margin-top: 20px;">
             <iframe src="documento.pdf" width="600" height="500"></iframe>
         </div>
     </div>
-
 
     <script>
         function mostrarVideo() {
