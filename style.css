@@ -89,3 +89,14 @@ body {
     margin-left: 5px;
     vertical-align: middle;
 }
+
+.description {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.description.visible {
+    display: block;
+}
