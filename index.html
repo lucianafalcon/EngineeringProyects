@@ -53,9 +53,10 @@
     <div id="videoContainer" style="display: none; text-align: center; margin-top: 20px; margin-right: 50px;">
         <div style="display: flex; justify-content: space-between; margin-top: 20px;">
             <div style="width: 20%; text-align: center; margin-left: 50px;">
+
                 <h1>NOTCH TWIN-T LOW PASS FILTER</h1>    
             </div>
-
+        <!-- <button onclick="ocultarInfo()" style="margin-top: 10px;">Cerrar</button> --> 
             <p style="width: 50%; text-align: justify; margin-right: 50px; margin-left: 50px;">
                 The designed Notch Twin-T filter is a band-reject filter in cascade with a low-pass filter. 
                 Its main function is to eliminate the specific frequency of 79.5 Hz while allowing the rest of the signal to pass 
@@ -83,25 +84,39 @@
 
     <script>
         function mostrarInfo() {
-            var infoDescription = document.getElementById("infoDescription");
-            infoDescription.style.display = (infoDescription.style.display === "none") ? "block" : "none";           
+            var infoDiv = document.getElementById("infoDescription");
+            var videoDiv = document.getElementById("videoContainer");
+    
+            if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+                infoDiv.style.display = "block";  // Muestra la info
+                videoDiv.style.display = "none";  // Oculta el video
+            } else {
+                infoDiv.style.display = "none";  // Si ya está visible, ocúltalo
+            }
         }
-
+    
         function mostrarVideo() {
-            var videoContainer = document.getElementById("videoContainer");
-            videoContainer.style.display = (videoContainer.style.display === "none") ? "block" : "none";
+            var infoDiv = document.getElementById("infoDescription");
+            var videoDiv = document.getElementById("videoContainer");
+    
+            if (videoDiv.style.display === "none" || videoDiv.style.display === "") {
+                videoDiv.style.display = "block";  // Muestra el video
+                infoDiv.style.display = "none";  // Oculta la info
+            } else {
+                videoDiv.style.display = "none";  // Si ya está visible, ocúltalo
+            }
         }
-        
-
+    
         function mostrarPdf() {
             var pdfContainer = document.getElementById("pdfContainer");
-            pdfContainer.style.display = (pdfContainer.style.display === "none") ? "block" : "none";
+            pdfContainer.style.display = (pdfContainer.style.display === "none" || pdfContainer.style.display === "") ? "block" : "none";
         }
-
+    
         function mostrarArchivos() {
             window.location.href = "https://github.com/lucianafalcon/Filtro---ADC.git";
         }
     </script>
+    
 
     <script src="js/app.js"></script>
 </body>
